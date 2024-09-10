@@ -1,0 +1,126 @@
+*
+{
+
+    margin:0;
+    padding :0;
+    background-image:url("https://th.bing.com/th/id/OIP.5eWFAfVYTCSP5CmEO-rNeQHaEo?w=310&h=183&c=7&r=0&o=5&pid=1.7") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.glow-text {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+}
+.glow-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    animation: glow-animation 1s infinite alternate;
+}
+
+@keyframes glow-animation {
+    0% {
+        text-shadow: 0 0 5px #fffF00, 0 0 5px #ff0000, 0 0 15px #ff6200, 0 0 20px #ff0000;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #fffF00, 0 0 10px #ff0000, 0 0 30px #ff6200, 0 0 40px #ff0000;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #fffF00, 0 0 5px #ff0000, 0 0 15px #ff6200, 0 0 20px #ff0000;
+    }
+}
+
+.container
+{
+    
+    text-align: center;
+    margin-top:20% ;
+    position: relative;
+    
+}
+
+.glow-text{
+    text-align: center;
+    font-size:150px;
+}
+.clock
+{
+    width:100%;
+    height:100%;
+    background:rgba(235,0,255,0.11);
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    backdrop-filter:blur(40px);
+}
+.dt
+{
+    width:800px;
+    height:180px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#e44b0e;
+    font-size:40% ;
+    
+
+}
+.dt::before
+{
+    content: '';
+    width:180px;
+    height:180px;
+    background: #fffF00;
+    border-radius: 5px;
+    position:absolute;
+    left:-50px;
+    top:-50px;
+    z-index: -1;
+
+}
+.dt::after
+{
+    content: '';
+    width:180px;
+    height:180px;
+    background: #3700ff;
+    border-radius: 50%;
+    position:absolute;
+    right:-30px;
+    bottom:-50px;
+    z-index: -1;
+
+}
+.clock span{
+
+    font-size:80px;
+    width:110px;
+    display:inline-block;
+    text-align: center;
+    position:relative;
+}
+.clock span::after
+{
+    
+    font-size: 16px;
+    position: absolute;
+    bottom:-5px;
+    left:50%;
+    transform: translate(-50%);
+}
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after
+{
+    content:'MINS';
+
+}
+#sec::after
+{
+    content:'SEC';
+}
